@@ -25,14 +25,18 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
 
             var fileUrl = await _uploader.UploadFile(request.Data.FileByte, "avatar", request.Data.UserName);
 
-            var info = new Domain.Entities.User {
+            var user = new Domain.Entities.User {
                 Name = request.Data.Name,
                 UserName = request.Data.UserName,
                 Email = request.Data.Email,
+                Phone = request.Data.Phone,
                 Age = request.Data.Age,
                 ProfilePicture = fileUrl,
-                CreateBy = "system"
+                CreatedBy = "system"
             };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return new CreateUserDto
             {

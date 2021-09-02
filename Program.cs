@@ -1,13 +1,10 @@
 using System;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApi.Application.Interfaces;
 using WebApi.Infrastructure.Persistences;
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
 
 namespace WebApi
 {
@@ -27,8 +24,7 @@ namespace WebApi
                     var isDevelopment = string.Equals(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"), "development", StringComparison.InvariantCultureIgnoreCase);
                     if (isDevelopment)
                     {
-                        //concreteContext.Database.Migrate();
-                        //WebApiInitializer.Initialize(concreteContext);
+                        WebApiInitializer.Initialize(concreteContext);
                     }
                 }
                 catch (Exception ex)
@@ -37,12 +33,6 @@ namespace WebApi
                     logger.LogError(ex, "An error occurred while migrating or initializing the database.");
                 }
             }
-
-            // init firebase
-            FirebaseApp.Create(new AppOptions()
-            {
-                Credential = GoogleCredential.GetApplicationDefault()
-            });
 
             host.Run();
         }

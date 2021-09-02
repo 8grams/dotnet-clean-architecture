@@ -12,7 +12,7 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
 
             RuleFor(x => x.Data.UserName)
                 .NotEmpty()
-                .WithMessage("Username harus disertakan");
+                .WithMessage("UserName harus diisi");
 
             RuleFor(x => x.Data.Email)
                 .NotEmpty()

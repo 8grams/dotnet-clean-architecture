@@ -66,11 +66,11 @@ namespace WebApi.Infrastructure.Persistences
 
             foreach (var entityEntry in entries)
             {
-                ((BaseEntity)entityEntry.Entity).LastUpdateDate = DateTime.Now;
+                ((BaseEntity)entityEntry.Entity).LastUpdatedDate = DateTime.Now;
 
                 if (entityEntry.State == EntityState.Added)
                 {
-                    ((BaseEntity)entityEntry.Entity).CreateDate = DateTime.Now;
+                    ((BaseEntity)entityEntry.Entity).CreatedDate = DateTime.Now;
                     ((BaseEntity)entityEntry.Entity).RowStatus = 0;
                 }
 

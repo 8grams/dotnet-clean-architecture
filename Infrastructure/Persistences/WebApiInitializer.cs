@@ -21,12 +21,19 @@ namespace WebApi.Infrastructure.Persistences
                 return; // Db has been seeded
             }
 
-            SeedAdditionalInfo(context);
+            SeedUsers(context);
         }
 
-        private void SeedAdditionalInfo(WebApiDbContext context)
+        private void SeedUsers(WebApiDbContext context)
         {
-            var info = new[]
+            context.Database.EnsureCreated();
+
+            if (context.Users.Any())
+            {
+                return; // Db has been seeded
+            }
+            
+            var users = new[]
             {
                 new User
                 {
@@ -58,7 +65,7 @@ namespace WebApi.Infrastructure.Persistences
                 
             };
 
-            context.Users.AddRange(info);
+            context.Users.AddRange(users);
             context.SaveChanges();
         }
     }

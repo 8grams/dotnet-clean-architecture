@@ -15,6 +15,11 @@ namespace WebApi.Infrastructure.Persistences.Configurations
                 .HasMaxLength(255)
                 .IsRequired();
 
+            builder.Property(e => e.UserName)
+                .HasColumnName("UserName")
+                .HasMaxLength(100)
+                .IsRequired();
+
             builder.Property(e => e.Email)
                 .HasColumnName("Email")
                 .HasMaxLength(50)
@@ -29,19 +34,19 @@ namespace WebApi.Infrastructure.Persistences.Configurations
                 .HasColumnName("Age")
                 .IsRequired();
 
-            builder.Property(e => e.CreateBy)
+            builder.Property(e => e.CreatedBy)
                 .HasColumnName("CreateBy")
                 .HasMaxLength(50);
 
-            builder.Property(e => e.CreateDate)
+            builder.Property(e => e.CreatedDate)
                 .HasColumnName("CreateDate")
                 .HasColumnType("datetime");
 
-            builder.Property(e => e.LastUpdateBy)
+            builder.Property(e => e.LastUpdatedBy)
                 .HasColumnName("LastUpdateBy")
                 .HasMaxLength(50);
 
-            builder.Property(e => e.LastUpdateDate)
+            builder.Property(e => e.LastUpdatedDate)
                 .HasColumnName("LastUpdateDate")
                 .HasColumnType("datetime");
 

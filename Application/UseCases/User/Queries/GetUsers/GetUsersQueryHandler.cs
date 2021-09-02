@@ -28,7 +28,7 @@ namespace WebApi.Application.UseCases.User.Queries.GetUsers
             
             if (!string.IsNullOrEmpty(request.QuerySearch))
             {
-                data = data.Where("Name.Contains(@0) || Username.Contains(@0) || Email.Contains(@0)", request.QuerySearch);
+                data = data.Where("Name.Contains(@0) || UserName.Contains(@0) || Email.Contains(@0)", request.QuerySearch);
             }
 
             var results = await data.OrderBy($"{request.SortColumn} {request.SortType}")

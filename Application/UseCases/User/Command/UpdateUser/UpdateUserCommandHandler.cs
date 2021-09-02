@@ -29,7 +29,7 @@ namespace WebApi.Application.UseCases.User.Command.UpdateUser
             user.Email = request.Data.Email;
             user.Age = request.Data.Age;
             user.ProfilePicture = fileUrl;
-            user.LastUpdateBy = "system";
+            user.LastUpdatedBy = "system";
 
             _context.Users.Update(user);
             await _context.SaveChangesAsync(cancellationToken);
