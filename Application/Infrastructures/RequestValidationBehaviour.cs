@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ValidationException = SFIDWebAPI.Application.Exceptions.ValidationException;
+using ValidationException = WebApi.Application.Exceptions.ValidationException;
 
-namespace SFIDWebAPI.Application.Infrastructures
+namespace WebApi.Application.Infrastructures
 {
     public class RequestValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

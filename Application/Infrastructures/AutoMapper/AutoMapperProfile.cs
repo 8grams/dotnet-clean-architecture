@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
 using AutoMapper;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Misc;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Misc;
 
-namespace SFIDWebAPI.Application.Infrastructures.AutoMapper
+namespace WebApi.Application.Infrastructures.AutoMapper
 {
     public class AutoMapperProfile : Profile
     {
-        public ISFDDBContext _context { set; get; }
+        public IWebApiDBContext _context { set; get; }
         public Utils _utils { set; get; }
-        public AutoMapperProfile(ISFDDBContext context, Utils utils)
+        public AutoMapperProfile(IWebApiDBContext context, Utils utils)
         {
             _context = context;
             _utils = utils;

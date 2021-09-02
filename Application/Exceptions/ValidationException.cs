@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 
-namespace SFIDWebAPI.Application.Exceptions
+namespace WebApi.Application.Exceptions
 {
     public class ValidationException : Exception
     {

@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using System.Net.Http;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Models.Notifications;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Models.Notifications;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 
-namespace SFIDWebAPI.Infrastructure.Notifications.SMS
+namespace WebApi.Infrastructure.Notifications.SMS
 {
     public class SMSService : ISMSService
     {

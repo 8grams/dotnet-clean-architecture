@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SFIDWebAPI.Application.Models.Query
+namespace WebApi.Application.Models.Query
 {
     public class BaseDtoData
     {

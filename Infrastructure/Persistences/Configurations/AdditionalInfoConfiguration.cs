@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SFIDWebAPI.Domain.Entities;
+using WebApi.Domain.Entities;
 
-namespace SFIDWebAPI.Infrastructure.Persistences.Configurations
+namespace WebApi.Infrastructure.Persistences.Configurations
 {
     public class AdditionalInfoConfiguration : IEntityTypeConfiguration<AdditionalInfo>
     {

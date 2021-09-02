@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using SFIDWebAPI.Application.Interfaces.Mappings;
+using WebApi.Application.Interfaces.Mappings;
 
-namespace SFIDWebAPI.Application.Infrastructures.AutoMapper
+namespace WebApi.Application.Infrastructures.AutoMapper
 {
     public sealed class Map
     {

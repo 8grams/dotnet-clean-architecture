@@ -1,4 +1,4 @@
-﻿namespace SFIDWebAPI.Infrastructure.Notifications.Email
+﻿namespace WebApi.Infrastructure.Notifications.Email
 {
     public class EmailSettings
     {

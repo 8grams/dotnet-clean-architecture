@@ -1,4 +1,4 @@
-namespace SFIDWebAPI.Application.Interfaces.Mappings {
+namespace WebApi.Application.Interfaces.Mappings {
     
     public interface IMapTo<TEntity> 
     {

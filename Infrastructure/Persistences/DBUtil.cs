@@ -3,12 +3,12 @@ using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace SFIDWebAPI.Infrastructure.Persistences
+namespace WebApi.Infrastructure.Persistences
 {
     public class DBUtil
     {
-        private static readonly string PasswordSalt = "SFIDWebAPIPasswordSalt!?1qaz2wsx";
-        private static readonly string AuthTokenKey = "SFIDWebAPIAuthTokenKeys";
+        private static readonly string PasswordSalt = "WebApiPasswordSalt!?1qaz2wsx";
+        private static readonly string AuthTokenKey = "WebApiAuthTokenKeys";
 
         public static string PasswordHash(string password)
         {

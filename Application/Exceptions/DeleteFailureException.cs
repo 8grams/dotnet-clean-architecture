@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SFIDWebAPI.Application.Exceptions
+namespace WebApi.Application.Exceptions
 {
     public class DeleteFailureException : Exception
     {

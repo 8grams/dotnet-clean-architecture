@@ -1,6 +1,6 @@
-using SFIDWebAPI.Application.Interfaces;
+using WebApi.Application.Interfaces;
 
-namespace SFIDWebAPI.Infrastructure.Persistences
+namespace WebApi.Infrastructure.Persistences
 {
     public class MemoryData : IMemoryData
     {

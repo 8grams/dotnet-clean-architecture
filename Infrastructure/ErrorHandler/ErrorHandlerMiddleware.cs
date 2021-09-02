@@ -3,9 +3,9 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using SFIDWebAPI.Application.Exceptions;
+using WebApi.Application.Exceptions;
 
-namespace SFIDWebAPI.Infrastructure.ErrorHandler
+namespace WebApi.Infrastructure.ErrorHandler
 {
     public class ErrorHandlerMiddleware
     {

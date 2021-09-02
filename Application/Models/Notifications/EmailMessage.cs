@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-namespace SFIDWebAPI.Application.Models.Notifications
+namespace WebApi.Application.Models.Notifications
 {
     public class EmailMessage
     {

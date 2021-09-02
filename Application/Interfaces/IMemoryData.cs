@@ -1,4 +1,4 @@
-namespace SFIDWebAPI.Application.Interfaces
+namespace WebApi.Application.Interfaces
 {
     public interface IMemoryData
     {

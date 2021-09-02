@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SFIDWebAPI.Presenter.Controllers
+namespace WebApi.Presenter.Controllers
 {
     public abstract class BaseController : ControllerBase
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SFIDWebAPI.Domain.Infrastructures
+namespace WebApi.Domain.Infrastructures
 {
     public class BaseEntity
     {

@@ -1,4 +1,4 @@
-﻿namespace SFIDWebAPI.Application.Models.Query
+﻿namespace WebApi.Application.Models.Query
 {
     public abstract class BaseDto
     {

@@ -1,4 +1,4 @@
-﻿namespace SFIDWebAPI.Infrastructure.Notifications.SMS
+﻿namespace WebApi.Infrastructure.Notifications.SMS
 {
     public class SMSSetting
     {

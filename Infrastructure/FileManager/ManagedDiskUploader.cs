@@ -2,10 +2,10 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Misc;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Misc;
 
-namespace SFIDWebAPI.Infrastructure.FileManager
+namespace WebApi.Infrastructure.FileManager
 {
     public class ManagedDiskUploader : IUploader
     {

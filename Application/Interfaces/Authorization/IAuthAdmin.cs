@@ -1,4 +1,4 @@
-namespace SFIDWebAPI.Application.Interfaces.Authorization
+namespace WebApi.Application.Interfaces.Authorization
 {
     public interface IAuthAdmin
     {

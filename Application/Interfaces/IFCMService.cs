@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using SFIDWebAPI.Application.Models.Notifications;
+using WebApi.Application.Models.Notifications;
 
-namespace SFIDWebAPI.Application.Interfaces
+namespace WebApi.Application.Interfaces
 {
     public interface IFCMService
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace SFIDWebAPI.Infrastructure.Authorization
+namespace WebApi.Infrastructure.Authorization
 {
     public static class AuthmeMiddlewareExtensions
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SFIDWebAPI.Domain.Infrastructures
+namespace WebApi.Domain.Infrastructures
 {
     public abstract class ValueObject
     {

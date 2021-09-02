@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Http;
 
-namespace SFIDWebAPI.Application.Misc
+namespace WebApi.Application.Misc
 {
     public class Utils
     {

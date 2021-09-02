@@ -1,6 +1,6 @@
-﻿using SFIDWebAPI.Domain.Infrastructures;
+﻿using WebApi.Domain.Infrastructures;
 
-namespace SFIDWebAPI.Domain.Entities
+namespace WebApi.Domain.Entities
 {
     public class Notification : BaseEntity
     {
@@ -10,7 +10,5 @@ namespace SFIDWebAPI.Domain.Entities
         public string Content { set; get; }
         public string Attachment { set; get; }
         public bool IsDeletable { set; get; }
-
-        public virtual NotificationStatus NotificationStatus { get; set; }
     }
 }

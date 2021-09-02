@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace SFIDWebAPI.Application.Infrastructures
+namespace WebApi.Application.Infrastructures
 {
     public class RequestLogger<TRequest> : IRequestPreProcessor<TRequest>
     {
@@ -17,7 +17,7 @@ namespace SFIDWebAPI.Application.Infrastructures
         public Task Process(TRequest request, CancellationToken cancellationToken)
         {
             var name = typeof(TRequest).Name;
-            _logger.LogInformation("SFIDWebApi Request: {Name} {@Request}", name, request);
+            _logger.LogInformation("WebApi Request: {Name} {@Request}", name, request);
             return Task.CompletedTask;
         }
     }

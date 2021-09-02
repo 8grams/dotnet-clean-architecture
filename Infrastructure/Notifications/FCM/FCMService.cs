@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using FirebaseAdmin.Messaging;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Models.Notifications;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Models.Notifications;
 
-namespace SFIDWebAPI.Infrastructure.Notifications.FCM
+namespace WebApi.Infrastructure.Notifications.FCM
 {
     public class FCMService : IFCMService
     {

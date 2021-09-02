@@ -1,6 +1,6 @@
-using SFIDWebAPI.Application.Interfaces.Authorization;
+using WebApi.Application.Interfaces.Authorization;
 
-namespace SFIDWebAPI.Infrastructure.Authorization
+namespace WebApi.Infrastructure.Authorization
 {
     public class AuthAdmin : IAuthAdmin
     {

@@ -12,21 +12,21 @@ using MediatR;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using Newtonsoft.Json.Serialization;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Infrastructures.AutoMapper;
-using SFIDWebAPI.Application.Infrastructures;
-using SFIDWebAPI.Application.UseCases.User.Auth.Command.ForgotPassword;
-using SFIDWebAPI.Application.Interfaces.Authorization;
-using SFIDWebAPI.Application.Misc;
-using SFIDWebAPI.Infrastructure.Notifications.Email;
-using SFIDWebAPI.Infrastructure.Notifications.SMS;
-using SFIDWebAPI.Infrastructure.Notifications.FCM;
-using SFIDWebAPI.Infrastructure.Persistences;
-using SFIDWebAPI.Infrastructure.Authorization;
-using SFIDWebAPI.Infrastructure.FileManager;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Infrastructures.AutoMapper;
+using WebApi.Application.Infrastructures;
+using WebApi.Application.UseCases.User.Command.CreateUser;
+using WebApi.Application.Interfaces.Authorization;
+using WebApi.Application.Misc;
+using WebApi.Infrastructure.Notifications.Email;
+using WebApi.Infrastructure.Notifications.SMS;
+using WebApi.Infrastructure.Notifications.FCM;
+using WebApi.Infrastructure.Persistences;
+using WebApi.Infrastructure.Authorization;
+using WebApi.Infrastructure.FileManager;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SFIDWebAPI
+namespace WebApi
 {
     public class Startup
     {
@@ -43,7 +43,7 @@ namespace SFIDWebAPI
             services.AddControllers();
 
             // Add MediatR
-            services.AddMediatR(typeof(ForgotPasswordHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assembly);
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehaviour<,>));
 
@@ -58,16 +58,16 @@ namespace SFIDWebAPI
             services.AddHttpClient();
 
             // Add DbContext using SQL Server Provider
-            services.AddDbContext<ISFDDBContext, SFDDbContext>(options =>
+            services.AddDbContext<IWebApiDBContext, WebApiDbContext>(options =>
                 options
                     .UseLazyLoadingProxies()
-                    .UseSqlServer(Configuration.GetConnectionString("SFDDatabase")));
+                    .UseSqlServer(Configuration.GetConnectionString("WebApiDatabase")));
 
             // mapper
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperProfile(
-                    services.BuildServiceProvider().GetService<ISFDDBContext>(),
+                    services.BuildServiceProvider().GetService<IWebApiDBContext>(),
                     services.BuildServiceProvider().GetService<Utils>()
                 ));
             });
@@ -75,7 +75,7 @@ namespace SFIDWebAPI
 
             services
                .AddMvc()
-               .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ForgotPasswordCommandValidator>())
+               .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>())
                .AddNewtonsoftJson(x =>
                {
                    x.SerializerSettings.ContractResolver = new DefaultContractResolver

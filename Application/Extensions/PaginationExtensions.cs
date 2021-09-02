@@ -3,9 +3,9 @@ using System.Linq;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
-using SFIDWebAPI.Application.Models.Query;
+using WebApi.Application.Models.Query;
 
-namespace SFIDWebAPI.Application.Extensions
+namespace WebApi.Application.Extensions
 {
     public static class PaginationExtensions
     {

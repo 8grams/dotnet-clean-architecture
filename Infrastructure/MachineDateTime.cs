@@ -1,7 +1,7 @@
 ﻿using System;
-using SFIDWebAPI.Application.Interfaces;
+using WebApi.Application.Interfaces;
 
-namespace SFIDWebAPI.Infrastructure
+namespace WebApi.Infrastructure
 {
     public class MachineDateTime : IDateTime
     {

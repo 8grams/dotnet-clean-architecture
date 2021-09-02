@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
+    <PackageReference Include="CsvHelper" Version="27.1.1" />
+    <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.3" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
+    <PackageReference Include="StoredProcedureEFCore" Version="1.0.5" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Infrastructure\README.md" />
+    <None Remove="Application\UseCases\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenter\" />
+    <Folder Include="Presenter\Controllers\" />
+    <Folder Include="Application\UseCases\User\" />
+    <Folder Include="Application\Models\" />
+    <Folder Include="Application\Models\Query\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Application\Infrastructures\" />
+    <Folder Include="Application\Infrastructures\AutoMapper\" />
+    <Folder Include="Application\Exceptions\" />
+    <Folder Include="Infrastructure\Persistences\" />
+    <Folder Include="Infrastructure\Notifications\" />
+    <Folder Include="Application\Models\Notifications\" />
+    <Folder Include="Infrastructure\Authorization\" />
+    <Folder Include="Application\Interfaces\Authorization\" />
+    <Folder Include="Presenter\Controllers\User\Setting\" />
+    <Folder Include="Infrastructure\Persistences\Configurations\" />
+    <Folder Include="Infrastructure\Notifications\Email\" />
+    <Folder Include="Infrastructure\Notifications\FCM\" />
+    <Folder Include="Infrastructure\Persistences\Migrations\" />
+    <Folder Include="Infrastructure\Notifications\SMS\" />
+    <Folder Include="Application\Extensions\" />
+    <Folder Include="Infrastructure\ErrorHandler\" />
+    <Folder Include="Application\Misc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Presenter\Controllers\User\AuthController.cs" />
+    <Compile Remove="Domain\Entities\MaterialCategory.cs" />
+    <Compile Remove="Domain\Entities\SFDTrainingMaterialFile.cs" />
+    <Compile Remove="Application\UseCases\Auth\Command\Login\LoginCreated.cs" />
+  </ItemGroup>
+</Project>

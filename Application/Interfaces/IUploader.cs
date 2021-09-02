@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace SFIDWebAPI.Application.Interfaces
+namespace WebApi.Application.Interfaces
 {
     public interface IUploader
     {

@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Infrastructure.Persistences;
+using WebApi.Application.Interfaces;
+using WebApi.Infrastructure.Persistences;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 
-namespace SFIDWebAPI
+namespace WebApi
 {
     public class Program
     {
@@ -20,9 +20,9 @@ namespace SFIDWebAPI
             {
                 try
                 {
-                    var context = scope.ServiceProvider.GetService<ISFDDBContext>();
+                    var context = scope.ServiceProvider.GetService<IWebApiDBContext>();
 
-                    var concreteContext = (SFDDbContext)context;
+                    var concreteContext = (WebApiDbContext)context;
 
                     var isDevelopment = string.Equals(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"), "development", StringComparison.InvariantCultureIgnoreCase);
                     if (isDevelopment)

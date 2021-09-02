@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SFIDWebAPI.Application.Models.Query
+namespace WebApi.Application.Models.Query
 {
     public abstract class PagedResultBase
     {

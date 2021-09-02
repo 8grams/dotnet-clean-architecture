@@ -3,11 +3,11 @@ using Microsoft.Extensions.Hosting;
 using System;
 using MailKit.Net.Smtp;
 using MimeKit;
-using SFIDWebAPI.Application.Interfaces;
-using SFIDWebAPI.Application.Models.Notifications;
+using WebApi.Application.Interfaces;
+using WebApi.Application.Models.Notifications;
 using Microsoft.Extensions.Options;
 
-namespace SFIDWebAPI.Infrastructure.Notifications.Email
+namespace WebApi.Infrastructure.Notifications.Email
 {
     public class EmailService : IEmailService
     {
@@ -26,7 +26,7 @@ namespace SFIDWebAPI.Infrastructure.Notifications.Email
             {
                 var mimeMessage = new MimeMessage();
                 mimeMessage.From.Add(new MailboxAddress(msg.FromName, msg.From));
-                mimeMessage.To.Add(new MailboxAddress(msg.To));
+                mimeMessage.To.Add(new MailboxAddress(msg.To, msg.To));
                 mimeMessage.Subject = msg.Subject;
                 mimeMessage.Body = new TextPart("html")
                 {
