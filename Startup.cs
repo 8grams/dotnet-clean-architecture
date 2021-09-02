@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using System.Linq;
 using System.IO;
@@ -58,16 +59,16 @@ namespace WebApi
             services.AddHttpClient();
 
             // Add DbContext using SQL Server Provider
-            services.AddDbContext<IWebApiDBContext, WebApiDbContext>(options =>
+            services.AddDbContext<IWebApiDbContext, WebApiDbContext>(options =>
                 options
                     .UseLazyLoadingProxies()
-                    .UseSqlServer(Configuration.GetConnectionString("WebApiDatabase")));
+                    .UseMySql(Configuration.GetConnectionString("WebApiDatabase"), new MySqlServerVersion(new Version(8, 0, 26))));
 
             // mapper
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperProfile(
-                    services.BuildServiceProvider().GetService<IWebApiDBContext>(),
+                    services.BuildServiceProvider().GetService<IWebApiDbContext>(),
                     services.BuildServiceProvider().GetService<Utils>()
                 ));
             });

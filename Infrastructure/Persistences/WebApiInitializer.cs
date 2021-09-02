@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using WebApi.Domain.Entities;
 
 namespace WebApi.Infrastructure.Persistences
 {
@@ -27,38 +28,32 @@ namespace WebApi.Infrastructure.Persistences
         {
             var info = new[]
             {
-                new AdditionalInfo
+                new User
                 {
-                    Title = "Info for Pajero Sport",
-                    ImageThumbnailId = 1,
-                    Link = "http://www.pdf995.com/samples/pdf.pdf",
-                    FileType = "pdf",
-                    FileCode = "001",
-                    TotalViews = 5,
-                    PublishedAt = DateTime.Now.AddDays(-7),
-                    ExpiresAt = DateTime.Now.AddDays(-1),
+                    Name = "Glend Maatita",
+                    UserName = "glendmaatita",
+                    Email = "glend.maatita@gmail.com",
+                    Phone = "0856996665856",
+                    Age = 40,
+                    ProfilePicture = "https://secure.gravatar.com/avatar/3d2b652a26c2407232df0b412227710e",
                 },
-                new AdditionalInfo
+                new User
                 {
-                    Title = "Info for Pajero",
-                    ImageThumbnailId = 1,
-                    Link = "http://www.pdf995.com/samples/pdf.pdf",
-                    FileType = "pdf",
-                    FileCode = "002",
-                    TotalViews = 5,
-                    PublishedAt = DateTime.Now.AddDays(-6),
-                    ExpiresAt = DateTime.Now.AddDays(7),
+                    Name = "Agung Laksono",
+                    UserName = "agunglaksono",
+                    Email = "agung.laksono@gmail.com",
+                    Phone = "085936882228",
+                    Age = 35,
+                    ProfilePicture = "https://secure.gravatar.com/avatar/3d2b652a26c2407232df0b412227710e",
                 },
-                new AdditionalInfo
+                new User
                 {
-                    Title = "Info for Outlander",
-                    ImageThumbnailId = 1,
-                    Link = "https://i.imgur.com/Cw6g6hM.png",
-                    FileType = "png",
-                    FileCode = "003",
-                    TotalViews = 10,
-                    PublishedAt = DateTime.Now.AddDays(-5),
-                    ExpiresAt = DateTime.Now.AddDays(9),
+                    Name = "Ahmad Nadjib",
+                    UserName = "ahmadnadjib",
+                    Email = "ahmad.nadjib@gmail.com",
+                    Phone = "0857452255896",
+                    Age = 37,
+                    ProfilePicture = "https://secure.gravatar.com/avatar/3d2b652a26c2407232df0b412227710e",
                 },
                 
             };

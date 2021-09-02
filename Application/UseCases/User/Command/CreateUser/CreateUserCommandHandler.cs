@@ -7,12 +7,12 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, CreateUserDto>
     {
-        private readonly IWebApiDBContext _context;
+        private readonly IWebApiDbContext _context;
         private readonly IUploader _uploader;
         private readonly IMediator _mediator;
         private readonly IMemoryData _memoryData;
 
-        public CreateUserCommandHandler(IWebApiDBContext context, IMediator mediator, IUploader uploader, IMemoryData memoryData)
+        public CreateUserCommandHandler(IWebApiDbContext context, IMediator mediator, IUploader uploader, IMemoryData memoryData)
         {
             _context = context;
             _uploader = uploader;
@@ -29,6 +29,7 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
                 Name = request.Data.Name,
                 UserName = request.Data.UserName,
                 Email = request.Data.Email,
+                Age = request.Data.Age,
                 ProfilePicture = fileUrl,
                 CreateBy = "system"
             };

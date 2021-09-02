@@ -20,7 +20,7 @@ namespace WebApi
             {
                 try
                 {
-                    var context = scope.ServiceProvider.GetService<IWebApiDBContext>();
+                    var context = scope.ServiceProvider.GetService<IWebApiDbContext>();
 
                     var concreteContext = (WebApiDbContext)context;
 
@@ -28,7 +28,7 @@ namespace WebApi
                     if (isDevelopment)
                     {
                         //concreteContext.Database.Migrate();
-                        //SFDInitializer.Initialize(concreteContext);
+                        //WebApiInitializer.Initialize(concreteContext);
                     }
                 }
                 catch (Exception ex)

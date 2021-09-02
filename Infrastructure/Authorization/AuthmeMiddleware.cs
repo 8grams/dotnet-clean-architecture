@@ -15,7 +15,7 @@ namespace WebApi.Infrastructure.Authorization
             _next = next;
         }
 
-        public Task InvokeAsync(HttpContext context, IWebApiDBContext dbContext, IAuthUser authUser)
+        public Task InvokeAsync(HttpContext context, IWebApiDbContext dbContext, IAuthUser authUser)
         {
             var authFilterCtx = context.Request;
             var request = authFilterCtx.HttpContext.Request;

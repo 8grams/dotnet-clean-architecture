@@ -11,7 +11,7 @@ using StoredProcedureEFCore;
 
 namespace WebApi.Infrastructure.Persistences
 {
-    public class WebApiDbContext : DbContext, IWebApiDBContext
+    public class WebApiDbContext : DbContext, IWebApiDbContext
     {
         public WebApiDbContext(DbContextOptions<WebApiDbContext> options) : base(options)
         {

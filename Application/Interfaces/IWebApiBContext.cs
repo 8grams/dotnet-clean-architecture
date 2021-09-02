@@ -6,7 +6,7 @@ using StoredProcedureEFCore;
 
 namespace WebApi.Application.Interfaces
 {
-    public interface IWebApiDBContext
+    public interface IWebApiDbContext
     {
         DbSet<User> Users { set; get; }
         IStoredProcBuilder loadStoredProcedureBuilder(string val);

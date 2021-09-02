@@ -22,7 +22,7 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
                 .NotEmpty()
                 .WithMessage("Nomor Telp harus disertakan");
 
-            RuleFor(x => x.Data.age)
+            RuleFor(x => x.Data.Age)
                 .NotEmpty()
                 .WithMessage("Umur harus disertakan");
 

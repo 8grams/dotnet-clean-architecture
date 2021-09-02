@@ -10,14 +10,12 @@ namespace WebApi.Application.UseCases.User.Command.UpdateUser
 
     public class UpdateUserData
     {
-        public int Id { set; get; }
-        public string Title { set; get; }
-        public int ImageThumbnailId { set; get; }
-        public string FileCode { set; get; }
+        public int Id { set;get; }
+        public string Name { set; get; }
+        public string UserName { set; get; }
+        public string Email { set; get; }
+        public string Phone { set; get; }
+        public int Age { set; get; }
         public string FileByte { set; get; }
-        public string FileName { set; get; }
-        public bool IsRecommended { set; get; }
-        public bool IsActive  { set; get; }
-        public bool IsDownloadable  { set; get; }
     }
 }

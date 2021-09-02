@@ -7,9 +7,9 @@ namespace WebApi.Application.Infrastructures.AutoMapper
 {
     public class AutoMapperProfile : Profile
     {
-        public IWebApiDBContext _context { set; get; }
+        public IWebApiDbContext _context { set; get; }
         public Utils _utils { set; get; }
-        public AutoMapperProfile(IWebApiDBContext context, Utils utils)
+        public AutoMapperProfile(IWebApiDbContext context, Utils utils)
         {
             _context = context;
             _utils = utils;

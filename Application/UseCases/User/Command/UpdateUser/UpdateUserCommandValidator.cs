@@ -6,13 +6,29 @@ namespace WebApi.Application.UseCases.User.Command.UpdateUser
     {
         public UpdateUserCommandValidator()
         {
-            RuleFor(x => x.Data.Title)
+            RuleFor(x => x.Data.Name)
                 .NotEmpty()
-                .WithMessage("Judul harus diisi");
+                .WithMessage("Nama harus diisi");
 
-            RuleFor(x => x.Data.ImageThumbnailId)
+            RuleFor(x => x.Data.UserName)
                 .NotEmpty()
-                .WithMessage("Gambar Thumbnail harus disertakan");
+                .WithMessage("Username harus disertakan");
+
+            RuleFor(x => x.Data.Email)
+                .NotEmpty()
+                .WithMessage("Email Name harus disertakan");
+
+            RuleFor(x => x.Data.Phone)
+                .NotEmpty()
+                .WithMessage("Nomor Telp harus disertakan");
+
+            RuleFor(x => x.Data.Age)
+                .NotEmpty()
+                .WithMessage("Umur harus disertakan");
+
+            RuleFor(x => x.Data.FileByte)
+                .NotEmpty()
+                .WithMessage("File harus disertakan");
         }
     }
 }

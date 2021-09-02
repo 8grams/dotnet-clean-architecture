@@ -12,10 +12,10 @@ namespace WebApi.Application.UseCases.User.Queries.GetUsers
 {
     public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, GetUsersDto>
     {
-        private readonly IWebApiDBContext _context;
+        private readonly IWebApiDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetUsersQueryHandler(IWebApiDBContext context, IMapper mapper)
+        public GetUsersQueryHandler(IWebApiDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

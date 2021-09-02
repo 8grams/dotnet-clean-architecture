@@ -14,7 +14,7 @@ namespace WebApi.Application.UseCases.User.Command.CreateUser
         public string UserName { set; get; }
         public string Email { set; get; }
         public string Phone { set; get; }
-        public int age { set; get; }
+        public int Age { set; get; }
         public string FileByte { set; get; }
     }
 }

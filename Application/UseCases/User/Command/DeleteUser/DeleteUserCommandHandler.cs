@@ -7,9 +7,9 @@ namespace WebApi.Application.UseCases.User.Command.DeleteUser
 {
     public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, DeleteUserDto>
     {
-        private readonly IWebApiDBContext _context;
+        private readonly IWebApiDbContext _context;
 
-        public DeleteUserCommandHandler(IWebApiDBContext context)
+        public DeleteUserCommandHandler(IWebApiDbContext context)
         {
             _context = context;
         }
