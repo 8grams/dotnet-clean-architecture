@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
@@ -54,27 +53,6 @@ namespace WebApi.Application.Misc
         public static string GetValidTopicName(string str)
         {
             return Regex.Replace(str, "[^A-Za-z0-9]", "").Trim().ToLower();
-        }
-
-        public static List<string> GetAllTopics(string pos, string dealerGroup, string dealerCity) 
-        {
-            List<string> topics = new List<string>();
-            List<string> positions = new List<string> { Utils.GetValidTopicName(pos), "all" };
-            List<string> groups = new List<string> { Utils.GetValidTopicName(dealerGroup), "all"};
-            List<string> cities = new List<string> { Utils.GetValidTopicName(dealerCity), "all"};
-            
-            for (var i = 0; i < positions.Count; i++) 
-            {
-                var position = positions[i];
-                for (var j = 0; j < groups.Count; j++) {
-                    String group = groups[j];
-                    for (var k = 0; k < cities.Count; k++) {
-                        String city = cities[k];
-                        topics.Add(position + "-" + group + "-" + city);
-                    }
-                }
-            }
-            return topics;
         }
 
         public string GetValidUrl(string path)

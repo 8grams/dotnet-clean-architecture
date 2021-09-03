@@ -9,12 +9,12 @@ namespace WebApi.Application.Exceptions
     {
         public IDictionary<string, string[]> Failures { get; }
 
-        public ValidationException() : base("One or more validation failures have occurred.")
+        public ValidationException(string errorMsg) : base(errorMsg)
         {
             Failures = new Dictionary<string, string[]>();
         }
 
-        public ValidationException(List<ValidationFailure> failures) : this()
+        public ValidationException(List<ValidationFailure> failures, string errorMsg) : this(errorMsg)
         {
             var propertyNames = failures.Select(e => e.PropertyName).Distinct();
 

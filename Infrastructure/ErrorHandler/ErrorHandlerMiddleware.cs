@@ -38,7 +38,7 @@ namespace WebApi.Infrastructure.ErrorHandler
             if (ex is ValidationException)
             {
                 code = HttpStatusCode.BadRequest;
-                errorMsg = string.Join("\n", ex.Message);
+                errorMsg = ex.Message;
 
             }
             var result = JsonConvert.SerializeObject(new {

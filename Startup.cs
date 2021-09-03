@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +26,7 @@ using WebApi.Infrastructure.Notifications.FCM;
 using WebApi.Infrastructure.Persistences;
 using WebApi.Infrastructure.Authorization;
 using WebApi.Infrastructure.FileManager;
-using Microsoft.AspNetCore.Mvc;
+using WebApi.Infrastructure.ErrorHandler;
 
 namespace WebApi
 {
@@ -134,7 +135,7 @@ namespace WebApi
                     RequestPath = "/uploads"
             });
 
-            // app.UseMiddleware(typeof(ErrorHandlerMiddleware));
+            app.UseMiddleware(typeof(ErrorHandlerMiddleware));
             app.UseAuthme();
             app.UseRouting();
 

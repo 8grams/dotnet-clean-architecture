@@ -71,7 +71,7 @@ namespace WebApi.Presenter.Controllers
         }
 
         [HttpPost]
-        [Route("/delete")]
+        [Route("delete")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<DeleteUserDto>> Destroy([FromBody] DeleteUserCommand Payload)
         {

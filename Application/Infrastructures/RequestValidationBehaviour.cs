@@ -1,5 +1,4 @@
-﻿using System;
-using MediatR;
+﻿using MediatR;
 using FluentValidation;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +29,7 @@ namespace WebApi.Application.Infrastructures
 
             if (failures.Count != 0)
             {
-                throw new ValidationException(failures);
+                throw new ValidationException(failures, string.Join('\n', failures));
             }
 
             return next();
